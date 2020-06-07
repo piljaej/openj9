@@ -68,5 +68,5 @@ RUN git clone https://github.com/piljaej/openj9-openjdk-jdk8 \
 
 # FROM openj9:latest 
 # COPY --from=jitserver_build /root/openj9-openjdk-jdk8/build/linux-x86_64-normal-server-release/images/j2sdk-image /root/j2sdk-image
+RUN cp -rf /root/openj9-openjdk-jdk8/build/linux-x86_64-normal-server-release/images/j2sdk-image /root/j2sdk-image
 WORKDIR /root
-RUN cp /root/openj9-openjdk-jdk8/build/linux-x86_64-normal-server-release/images/j2sdk-image /root/j2sdk-image
