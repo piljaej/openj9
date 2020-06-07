@@ -633,12 +633,12 @@ create_git_cache() {
   echo "RUN mkdir $git_cache_dir \\"
   echo " && cd $git_cache_dir \\"
   echo " && git init --bare \\"
-  add_git_remote jdk8    https://github.com/ibmruntimes/openj9-openjdk-jdk8.git
+  add_git_remote jdk8    https://github.com/piljaej/openj9-openjdk-jdk8.git
   add_git_remote jdk11   https://github.com/ibmruntimes/openj9-openjdk-jdk11.git
   add_git_remote jdk14   https://github.com/ibmruntimes/openj9-openjdk-jdk14.git
   add_git_remote jdknext https://github.com/ibmruntimes/openj9-openjdk-jdk.git
-  add_git_remote omr     https://github.com/eclipse/openj9-omr.git
-  add_git_remote openj9  https://github.com/eclipse/openj9.git
+  add_git_remote omr     https://github.com/piljaej/openj9-omr.git
+  add_git_remote openj9  https://github.com/piljaej/openj9.git
   echo " && echo Fetching repository cache... \\"
   echo " && git fetch jdk14 \\"
   echo " && git fetch --all \\"
