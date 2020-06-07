@@ -32,8 +32,8 @@
 
 FROM openj9:latest AS jitserver_build
 
-ARG openj9_repo=https://github.com/eclipse/openj9.git
-ARG omr_repo=https://github.com/eclipse/openj9-omr.git
+ARG openj9_repo=https://github.com/piljaej/openj9.git
+ARG omr_repo=https://github.com/piljaej/openj9-omr.git
 
 RUN apt-get update \
   && apt-get install -qq -y --no-install-recommends \
@@ -59,7 +59,7 @@ RUN wget https://github.com/protocolbuffers/protobuf/releases/download/v3.7.1/pr
 # Grab sources from openj9-openjdk-jdk8 and JITServer repos
 # Then builds JITServer
 WORKDIR /root
-RUN git clone https://github.com/ibmruntimes/openj9-openjdk-jdk8 \
+RUN git clone https://github.com/piljaej/openj9-openjdk-jdk8 \
  && cd openj9-openjdk-jdk8 \
  && bash ./get_source.sh -openj9-repo=$openj9_repo -omr-repo=$omr_repo \
  && bash ./configure --with-freemarker-jar=/root/freemarker.jar --enable-jitserver \
