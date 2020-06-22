@@ -40,8 +40,7 @@ RUN apt-get update \
     g++-7 \
     gcc-7 \
     libssl-dev \
-  && rm -rf /var/lib/apt/lists/* \
-  && apt-get install -y vim
+  && rm -rf /var/lib/apt/lists/* 
 
 # JITServer needs to be built with a newer GCC
 RUN ln -sf /usr/bin/g++ /usr/bin/c++ \
@@ -69,5 +68,9 @@ RUN git clone https://github.com/piljaej/openj9-openjdk-jdk8 \
 
 # FROM openj9:latest 
 # COPY --from=jitserver_build /root/openj9-openjdk-jdk8/build/linux-x86_64-normal-server-release/images/j2sdk-image /root/j2sdk-image
+
+RUN apt-get update \
+  && apt-get install -y vim
+
 RUN cp -rf /root/openj9-openjdk-jdk8/build/linux-x86_64-normal-server-release/images/j2sdk-image /root/j2sdk-image
 WORKDIR /root
