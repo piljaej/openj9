@@ -40,7 +40,8 @@ RUN apt-get update \
     g++-7 \
     gcc-7 \
     libssl-dev \
-  && rm -rf /var/lib/apt/lists/*
+  && rm -rf /var/lib/apt/lists/* \
+  && apt-get install -y vim
 
 # JITServer needs to be built with a newer GCC
 RUN ln -sf /usr/bin/g++ /usr/bin/c++ \
