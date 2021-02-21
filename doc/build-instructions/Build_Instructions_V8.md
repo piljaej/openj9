@@ -544,6 +544,7 @@ You must install a number of software dependencies to create a suitable build en
 
 - [Xcode >= 11.4](https://developer.apple.com/download/more/) (requires an Apple account to log in).
 - [macOS OpenJDK 8](https://api.adoptopenjdk.net/v3/binary/latest/8/ga/mac/x64/jdk/openj9/normal/adoptopenjdk), which is used as the boot JDK.
+- Copy the files of bin folder to Content
 
 The following dependencies can be installed by using [Homebrew](https://brew.sh/) (the specified versions are minimums):
 
